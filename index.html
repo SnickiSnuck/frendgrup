@@ -6,7 +6,7 @@
   <title>Frend Grup</title>
   <link rel="stylesheet" href="navbar.css">
   <link rel="stylesheet" href="main.css">
-  <link rel="icon" href="./img/icons/logo-icon.png">
+  <link rel="icon" href="./img/icons/logo-icon-dark.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,13 +23,13 @@
   <nav>
     <ul class="sidebar">
       <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-      <li><a href="./error">Minecraft-Server</a></li>
+      <li><a href="./minecraft-server.html">Minecraft-Server</a></li>
       <li><a href="./error">Zeitmaschine</a></li>
       <li><a href="./changelog">Changelog</a></li>
     </ul>
     <ul>
       <li><a href="./index">Startseite</a></li>
-      <li class="hideOnMobile"><a href="./error">Minecraft-Server</a></li>
+      <li class="hideOnMobile" id="dropdown-button"><a href="./minecraft-server.html">Minecraft-Server</a></li>
       <li class="hideOnMobile"><a href="./error">Zeitmaschine</a></li>
       <li class="hideOnMobile"><a href="./changelog">Changelog</a></li>
       <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M160-120q-33 0-56.5-23.5T80-200v-120h800v120q0 33-23.5 56.5T800-120H160Zm0-120v40h640v-40H160Zm320-180q-36 0-57 20t-77 20q-56 0-76-20t-56-20q-36 0-57 20t-77 20v-80q36 0 57-20t77-20q56 0 76 20t56 20q36 0 57-20t77-20q56 0 77 20t57 20q36 0 56-20t76-20q56 0 79 20t55 20v80q-56 0-75-20t-55-20q-36 0-58 20t-78 20q-56 0-77-20t-57-20ZM80-560v-40q0-115 108.5-177.5T480-840q183 0 291.5 62.5T880-600v40H80Zm400-200q-124 0-207.5 31T166-640h628q-23-58-106.5-89T480-760Zm0 520Zm0-400Z"/></svg></a></li>
@@ -39,9 +39,9 @@
     <br><br><br><br><h1>Frend Grup</h1>
 
       <a href="https://discord.gg/CyfqzwU5PB" target="_blank"><button class="fancy-button">Beitreten</button></a>
-      <a href="https://discord.com/channels/1017495993538850947/1126972291432067152" target="_blank"><button>#schreiben</button></a>
-      <a href="https://discord.com/channels/1017495993538850947/1183062440020279306" target="_blank"><button>#memes</button></a>
-      <a href="https://discord.com/channels/1017495993538850947/1224606101022965760" target="_blank"><button>#neuigkeiten</button></a><br><br>
+      <a href="./minecraft-server"><button>Minecraft-Server</button></a>
+      <a href="./error"><button>Zeitmaschine</button></a>
+      <a href="./changelog"><button>Changelog</button></a><br><br>
 
     <div class="card-container">
       <div class="card"><img class="media-card" src="" alt="./img/news/25-03-28.png"><h3>Frend Grup: Scarlet Forest Update 5.3</h3><hr><p>Ihr könnt dem Server nun auch mit der Minecraft-Version 1.21.5 (Spring to Life) beitreten. Das bedeutet nicht, dass der Inhalt des Updates auch spielbar ist, denn der Server ist (und bleibt) auf der 1.21.4.</p><p style="color: grey;">28. März 2025</p></div>
@@ -56,7 +56,7 @@
       <div class="card"><img class="media-card" src="./img/news/24-08-19.png"><h3>Frend Grup: Cherry Grove Update 4.3</h3><hr><p>Noch leichter war minen noch nie. Wenn du beim abbauen eines Erzes kriechst, kannst du nun die gesamte Ader eines Blockes abbauen. Dies funktioniert nur, wenn du satt bist.</p><p style="color: grey;">19. August 2024</p></div>
       <div class="card"><img class="media-card" src="./img/news/24-08-12.png"><h3>Frend Grup: Cherry Grove Update 4.2</h3><hr><p>Die Übersetzung ist besser, Plugins wurden aktualisiert und verschiedene Eigenschaften wurden geändert, um die Spielerfahrung noch besser zu machen.</p><p style="color: grey;">12. August 2024</p></div>
       <div class="card"><img class="media-card" src="./img/news/24-08-08.png"><h3>Frend Grup: Cherry Grove Update 4.1</h3><hr><p>Unser Minecraft-Server hat sein erstes und bisher größtes Update bekommen. Anti-Cheat wurde verbessert, Griefing ist beinahe unmöglich und Modilla 3 ist da.</p><p style="color: grey;">08. August 2024</p></div>
-      <div class="card"><video class="media-card" src="./video/fgmc4-trailer.mp4" controls></video><h3>Unser 4. Minecraft-Server ist endlich da</h3><hr><p>Seid am 06. August um 12:00 (am liebsten etwas früher) im vc3 um mitzuspielen. Nur Minecraft Java Edition, 1.20.6. Die Serveradresse lautet: "frendgrup.de". </p><p style="color: grey;">01. August 2024 • <a href="https://www.youtube.com/watch?v=RDbjy8DYxLI" target="_blank">YouTube</a></p></div>
+      <div class="card"><video class="media-card" src="./video/fgmc4-trailer.mp4" controls></video><h3>Unser 4. Minecraft-Server ist endlich da</h3><hr><p>Seid am 06. August um 12:00 (am liebsten etwas früher) im vc3 um mitzuspielen. Nur Minecraft Java Edition, 1.20.6.</p><p style="color: grey;">01. August 2024 • <a href="https://www.youtube.com/watch?v=RDbjy8DYxLI" target="_blank">YouTube</a></p></div>
     </div>
 
     <footer>Sehr frühe Version der Website - Fehler sind zu erwarten <br> Made with ❤️ by <a href="https://discordid.netlify.app/?id=794171026698928158" target="_blank">SnickiSnuck</a></footer>

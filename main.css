@@ -11,7 +11,7 @@ body{
   text-align: center;
 }
 
-h1{font-size: 4rem; color: white; margin: 1rem;} h2{font-size: 1.8rem; color: white; margin: 16px;} h3{font-size: 1.2rem; margin: 16px;} p{font-size: 1rem;  margin: 16px; color: rgb(240, 240, 240);} hr{border: 1px solid rgb(40, 40, 40);}
+h1{font-size: 4rem; color: white; margin: 1rem;} h2{font-size: 2.5rem; color: white; margin: 16px;} h3{font-size: 1.2rem; margin: 16px;} p{font-size: 1rem;  margin: 16px; color: rgb(240, 240, 240);} hr{border: 1px solid rgb(40, 40, 40);}
 
 a{color: rgb(100, 100, 255); text-decoration: none;} a:hover{text-decoration: underline;} a:active{color: rgb(255, 100, 100);}
 
@@ -19,7 +19,7 @@ button{
   font-family: Inter;
   background-color: rgb(15, 15, 20);
   border: 1px solid rgb(40, 40, 40);
-  padding: 14px 16px;
+  padding: 1rem 1rem;
   color: rgb(240, 240, 240);
   border-radius: 10px;
   margin: 10px;
@@ -27,14 +27,8 @@ button{
   cursor: pointer;
 }
 
-button:hover{
-  scale: 1.05;
-  box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.3);
-}
+button:hover{scale: 1.05; box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.3);} button:active{scale: 0.95; box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.3);}
 
-button:active{
-  scale: 0.95;
-}
 
 footer{
   background-color: rgb(15, 15, 20);
@@ -74,6 +68,9 @@ footer{
   margin: 10px;
   transition: scale 150ms, box-shadow 300ms, filter 150ms;
   resize: both;
+  animation: appear ease-out;
+  animation-timeline: view();
+  animation-range: entry 0;
 }
 
 .card:hover{
@@ -82,13 +79,16 @@ footer{
 }
 
 .wide-card{
+  max-width: 70vw;
   background-color: rgb(15, 15, 20);
   border: 1px solid rgb(40, 40, 40);
   border-radius: 15px;
   padding: 10px;
   margin: 10px;
   transition: scale 150ms, box-shadow 300ms, filter 150ms;
-  resize: both;
+  animation: appear ease-out;
+  animation-timeline: view();
+  animation-range: entry 0;
 }
 
 .wide-card:hover{
@@ -106,9 +106,35 @@ footer{
 .fancy-button{
   background: rgb(60, 60, 255);
   border-color: rgb(80, 80, 255);
+  transition: scale 100ms, box-shadow 400ms;
 }
 
 .fancy-button:hover{
   background: linear-gradient(to right rgb(60, 60, 255), rgb(255, 0, 0));
   box-shadow: 0px 0px 20px rgb(60, 60, 255);
+}
+
+.header-img{
+  width: 80%;
+  margin: 10px 50px;
+  transition: all 200ms;
+}
+
+@media(min-width: 1000px){
+  .header-img{
+    width: 50%;
+  }
+}
+
+@keyframes appear{
+  from{
+    opacity: 0;
+    scale: 0.9;
+    filter: blur(10px);
+  }
+  to{
+    opacity: 1;
+    scale: 1;
+    filter: none;
+  }
 }
