@@ -1,11 +1,11 @@
 *{
   margin: 0;
   padding: 0;
+  font-family: Inter;
 }
 
 body{
   min-height: 100vh;
-  font-family: Inter;
   background-color: rgb(25, 25, 30);
   color: rgb(240, 240, 240);
   text-align: center;
@@ -15,8 +15,17 @@ h1{font-size: 4rem; color: white; margin: 1rem;} h2{font-size: 2.5rem; color: wh
 
 a{color: rgb(100, 100, 255); text-decoration: none;} a:hover{text-decoration: underline;} a:active{color: rgb(255, 100, 100);}
 
+img{
+  border-radius: 10px;
+  border: 1px solid rgb(40, 40, 40);
+}
+
+video{
+  border-radius: 10px;
+  border: 1px solid rgb(40, 40, 40);
+}
+
 button{
-  font-family: Inter;
   background-color: rgb(15, 15, 20);
   border: 1px solid rgb(40, 40, 40);
   padding: 1rem 1rem;
@@ -32,6 +41,7 @@ button:hover{scale: 1.05; box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.3);} button:ac
 
 footer{
   background-color: rgb(15, 15, 20);
+  color: grey;
   border-top: 1px solid rgb(40, 40, 40);
   margin-top: 15px;
   padding: 10px;
@@ -39,11 +49,15 @@ footer{
 
 /* END OF BASE STYLES */
 
-.bottom-shadow{
-  display: fixed;
-  width: 100%;
-  height: 50px;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+.fancy-button{
+  background: rgb(60, 60, 255);
+  border-color: rgb(80, 80, 255);
+  transition: scale 100ms, box-shadow 400ms;
+}
+
+.fancy-button:hover{
+  background: linear-gradient(to right rgb(60, 60, 255), rgb(255, 0, 0));
+  box-shadow: 0px 0px 20px rgb(60, 60, 255);
 }
 
 .card-container{
@@ -68,61 +82,50 @@ footer{
   margin: 10px;
   transition: scale 150ms, box-shadow 300ms, filter 150ms;
   resize: both;
-  animation: appear ease-out;
+  animation: appear linear;
   animation-timeline: view();
   animation-range: entry 0;
 }
 
-.card:hover{
-  scale: 1.02;
-  box-shadow: 0px 10px 20px rgb(0, 0, 0, 0.2);
-}
-
 .wide-card{
-  max-width: 70vw;
+  max-width: 90vw;
   background-color: rgb(15, 15, 20);
   border: 1px solid rgb(40, 40, 40);
   border-radius: 15px;
   padding: 10px;
   margin: 10px;
-  transition: scale 150ms, box-shadow 300ms, filter 150ms;
-  animation: appear ease-out;
+  transition: scale 150ms, box-shadow 300ms;
+  animation: appear linear;
   animation-timeline: view();
   animation-range: entry 0;
 }
 
-.wide-card:hover{
-  scale: 1.02;
-  box-shadow: 0px 10px 20px rgb(0, 0, 0, 0.2);
-}
-
 .media-card{
   width: 100%;
-  border-radius: 10px;
-  border: 1px solid rgb(40, 40, 40);
-  transition: 500ms;
 }
 
-.fancy-button{
-  background: rgb(60, 60, 255);
-  border-color: rgb(80, 80, 255);
-  transition: scale 100ms, box-shadow 400ms;
+.video-card{
+  transition: scale 150ms, box-shadow 300ms;
+  max-width: 90%;  
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0;
 }
 
-.fancy-button:hover{
-  background: linear-gradient(to right rgb(60, 60, 255), rgb(255, 0, 0));
-  box-shadow: 0px 0px 20px rgb(60, 60, 255);
-}
+
 
 .header-img{
   width: 80%;
-  margin: 10px 50px;
   transition: all 200ms;
+  border: none;
 }
 
-@media(min-width: 1000px){
+@media(min-width: 900px){
   .header-img{
-    width: 50%;
+    max-width: 50rem;
+  }
+  .video-card{
+    width: 50rem;
   }
 }
 

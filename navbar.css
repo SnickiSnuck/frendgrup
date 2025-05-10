@@ -1,10 +1,15 @@
 nav{
   position: fixed;
   width: 100%;
-  background-color: rgb(15, 15, 20);
-  backdrop-filter: blur(10px);
+  background-color: rgb(12, 12, 17, 0.8);
+  backdrop-filter: blur(20px);
   border-bottom: 1px solid rgb(40, 40, 40);
   z-index: 998;
+  transition: 100ms;
+}
+
+nav:hover{
+  background-color: rgb(15, 15, 20);
 }
 
 nav ul{
