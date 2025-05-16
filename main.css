@@ -7,11 +7,11 @@
 body{
   min-height: 100vh;
   background-color: rgb(25, 25, 30);
-  color: rgb(240, 240, 240);
+  color: white;
   text-align: center;
 }
 
-h1{font-size: 4rem; color: white; margin: 1rem;} h2{font-size: 2.5rem; color: white; margin: 16px;} h3{font-size: 1.2rem; margin: 16px;} p{font-size: 1rem;  margin: 16px; color: rgb(240, 240, 240);} hr{border: 1px solid rgb(40, 40, 40);}
+h1{font-size: 4rem; margin: 1rem; text-shadow: 0 0 5px rgb(0, 0, 0, 1);} h2{font-size: 2.5rem; margin: 16px; text-shadow: 0 0 5px rgb(0, 0, 0, 1);} h3{font-size: 1.2rem; margin: 16px; text-shadow: 0 0 5px rgb(0, 0, 0, 1);} p{font-size: 1rem;  margin: 16px; color: rgb(200, 200, 200);} hr{border: 1px solid rgb(40, 40, 40);}
 
 a{color: rgb(100, 100, 255); text-decoration: none;} a:hover{text-decoration: underline;} a:active{color: rgb(255, 100, 100);}
 
@@ -25,6 +25,11 @@ video{
   border: 1px solid rgb(40, 40, 40);
 }
 
+video:fullscreen{
+  border-radius: none;
+  border: none;
+}
+
 button{
   background-color: rgb(15, 15, 20);
   border: 1px solid rgb(40, 40, 40);
@@ -32,11 +37,12 @@ button{
   color: rgb(240, 240, 240);
   border-radius: 10px;
   margin: 10px;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
   transition: scale 100ms, box-shadow 200ms;
   cursor: pointer;
 }
 
-button:hover{scale: 1.05; box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.3);} button:active{scale: 0.95; box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.3);}
+button:hover{scale: 1.05; box-shadow: 0px 0px 15px rgb(0, 0, 0, 0.5);} button:active{scale: 0.95; box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.3);}
 
 
 footer{
@@ -45,6 +51,7 @@ footer{
   border-top: 1px solid rgb(40, 40, 40);
   margin-top: 15px;
   padding: 10px;
+  box-shadow: 0 0 20px rgb(0, 0, 0, 0.3);
 }
 
 /* END OF BASE STYLES */
@@ -75,16 +82,17 @@ footer{
 
 .card{
   max-width: 21.5rem;
-  background-color: rgb(15, 15, 20);
+  background: rgb(15, 15, 20);
   border: 1px solid rgb(40, 40, 40);
   border-radius: 15px;
   padding: 10px;
   margin: 10px;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
   transition: scale 150ms, box-shadow 300ms, filter 150ms;
   resize: both;
   animation: appear linear;
   animation-timeline: view();
-  animation-range: entry 0;
+  animation-range: entry;
 }
 
 .wide-card{
@@ -94,6 +102,7 @@ footer{
   border-radius: 15px;
   padding: 10px;
   margin: 10px;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
   transition: scale 150ms, box-shadow 300ms;
   animation: appear linear;
   animation-timeline: view();
@@ -107,6 +116,7 @@ footer{
 .video-card{
   transition: scale 150ms, box-shadow 300ms;
   max-width: 90%;  
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
   animation: appear linear;
   animation-timeline: view();
   animation-range: entry 0;
@@ -131,9 +141,8 @@ footer{
 
 @keyframes appear{
   from{
-    opacity: 0;
+    box-shadow: none;
     scale: 0.9;
-    filter: blur(10px);
   }
   to{
     opacity: 1;
