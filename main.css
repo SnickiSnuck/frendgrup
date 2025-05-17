@@ -11,9 +11,13 @@ body{
   text-align: center;
 }
 
-h1{font-size: 4rem; margin: 1rem; text-shadow: 0 0 5px rgb(0, 0, 0, 1);} h2{font-size: 2.5rem; margin: 16px; text-shadow: 0 0 5px rgb(0, 0, 0, 1);} h3{font-size: 1.2rem; margin: 16px; text-shadow: 0 0 5px rgb(0, 0, 0, 1);} p{font-size: 1rem;  margin: 16px; color: rgb(200, 200, 200);} hr{border: 1px solid rgb(40, 40, 40);}
+h1{font-size: 4rem; margin: 1rem; text-shadow: 0 0 5px rgb(0, 0, 0, 1);} h2{font-size: 2.5rem; margin: 16px; text-shadow: 0 0 5px rgb(0, 0, 0, 1);}
+h3{font-size: 1.2rem; margin: 1rem; text-shadow: 0 0 5px rgb(0, 0, 0, 1);} p{font-size: 1rem;  margin: 1rem; color: rgb(220, 220, 220);}
+li{color: rgb(220, 220, 220);} hr{border: 1px solid rgb(40, 40, 40);} ul{list-style-position: inside; margin: 1rem;}
 
-a{color: rgb(100, 100, 255); text-decoration: none;} a:hover{text-decoration: underline;} a:active{color: rgb(255, 100, 100);}
+a{color: rgb(100, 100, 255); text-decoration: none; transition: all 150ms;}
+a:hover{color: rgb(140, 140, 255); text-shadow: 0px 0px 5px rgb(60, 60, 255);}
+a:active{color: rgb(255, 100, 100); text-shadow: 0px 0px 5px rgb(255, 100, 100);}
 
 img{
   border-radius: 10px;
@@ -34,23 +38,24 @@ button{
   background-color: rgb(15, 15, 20);
   border: 1px solid rgb(40, 40, 40);
   padding: 1rem 1rem;
-  color: rgb(240, 240, 240);
-  border-radius: 10px;
+  color: white;
+  border-radius: 0.625rem;
   margin: 10px;
   box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
   transition: scale 100ms, box-shadow 200ms;
   cursor: pointer;
 }
 
-button:hover{scale: 1.05; box-shadow: 0px 0px 15px rgb(0, 0, 0, 0.5);} button:active{scale: 0.95; box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.3);}
-
+button:hover{scale: 1.05; box-shadow: 0px 0px 15px rgb(0, 0, 0, 0.5);}
+button:active{scale: 0.95; box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.3);}
 
 footer{
   background-color: rgb(15, 15, 20);
+  width: 100vw;
   color: grey;
   border-top: 1px solid rgb(40, 40, 40);
   margin-top: 15px;
-  padding: 10px;
+  padding: 10px 0;
   box-shadow: 0 0 20px rgb(0, 0, 0, 0.3);
 }
 
@@ -63,7 +68,6 @@ footer{
 }
 
 .fancy-button:hover{
-  background: linear-gradient(to right rgb(60, 60, 255), rgb(255, 0, 0));
   box-shadow: 0px 0px 20px rgb(60, 60, 255);
 }
 
@@ -84,7 +88,7 @@ footer{
   max-width: 21.5rem;
   background: rgb(15, 15, 20);
   border: 1px solid rgb(40, 40, 40);
-  border-radius: 15px;
+  border-radius: 1rem;
   padding: 10px;
   margin: 10px;
   box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
@@ -96,12 +100,12 @@ footer{
 }
 
 .wide-card{
-  max-width: 90vw;
+  max-width: 45.5rem;
   background-color: rgb(15, 15, 20);
   border: 1px solid rgb(40, 40, 40);
-  border-radius: 15px;
-  padding: 10px;
-  margin: 10px;
+  border-radius: 1rem;
+  padding: 0.625rem;
+  margin: 0.625rem;
   box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
   transition: scale 150ms, box-shadow 300ms;
   animation: appear linear;
@@ -111,15 +115,7 @@ footer{
 
 .media-card{
   width: 100%;
-}
-
-.video-card{
-  transition: scale 150ms, box-shadow 300ms;
-  max-width: 90%;  
-  box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
-  animation: appear linear;
-  animation-timeline: view();
-  animation-range: entry 0;
+  border-radius: 0.625rem;
 }
 
 
